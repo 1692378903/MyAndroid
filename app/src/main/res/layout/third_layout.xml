@@ -5,21 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FirstActivity">
+    tools:context=".ThirdActivity">
 
     <Button
-        android:id="@+id/button_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="退出应用"/>
-    <Button
-        android:id="@+id/button_2"
-        android:text="SecondActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/button_4"
-        android:text="百度"
+        android:id="@+id/button_5"
+        android:text="Button 5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

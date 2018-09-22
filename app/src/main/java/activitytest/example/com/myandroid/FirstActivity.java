@@ -1,6 +1,7 @@
 package activitytest.example.com.myandroid;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +18,7 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.first_layout);
         Button button1 = (Button) findViewById(R.id.button_1);
         Button button2 = (Button) findViewById(R.id.button_2);
+        Button button4 = (Button) findViewById(R.id.button_4);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,15 +27,27 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener(){
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+                Intent intent = new Intent("com.example.activitytest.ACTION_START");
+                intent.addCategory("com.example.activitytest.MY_CATEGORY");
+                //隐式intent
+                startActivity(intent);
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
             }
         });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

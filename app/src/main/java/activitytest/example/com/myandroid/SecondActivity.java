@@ -17,6 +17,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this,FirstActivity.class);
+                //显式intent
                 startActivity(intent);
             }
         });
